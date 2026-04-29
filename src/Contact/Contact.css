@@ -1,0 +1,141 @@
+.contactSection {
+  padding: 80px 6%;
+  background: #f7f4f1;
+}
+
+.contactWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT */
+.contactIntro {
+  max-width: 520px;
+}
+
+.contactTag {
+  display: inline-block;
+  background: rgba(196, 106, 58, 0.1);
+  color: #c46a3a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.contactIntro h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.contactIntro p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.contactCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactCard {
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.contactCard:hover {
+  transform: translateY(-3px);
+}
+
+.contactCard h3 {
+  color: #c46a3a;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* RIGHT */
+.contactFormBox {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+
+/* FORM */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.doubleField {
+  display: flex;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field label {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.field textarea {
+  min-height: 140px;
+}
+
+.contactBtn {
+  margin-top: 10px;
+  background: #c46a3a;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contactBtn:hover {
+  background: #a9562e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contactIntro h1 {
+    font-size: 36px;
+  }
+
+  .doubleField {
+    flex-direction: column;
+  }
+}

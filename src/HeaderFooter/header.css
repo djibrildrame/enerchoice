@@ -1,0 +1,94 @@
+/* ====== Base ====== */
+.header {
+  width: 100%;
+  position: sticky;       /* reste en haut */
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Conteneur */
+.head {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* Logo */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+
+}
+
+/* ====== Navigation ====== */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+/* Hover */
+.navLink:hover {
+  background: rgba(255, 140, 0, 0.12);
+  color: #ff8c00;
+  transform: translateY(-1px);
+}
+
+/* Lien actif (optionnel, si tu utilises NavLink au lieu de Link) */
+.navLink.active {
+  background: #ff8c00;
+  color: #fff;
+}
+
+
+
+
+/* ====== Responsive ====== */
+@media (max-width: 700px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .navLink {
+    width: 100%;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .navLink:hover {
+    background: rgba(255, 140, 0, 0.15);
+  }
+}

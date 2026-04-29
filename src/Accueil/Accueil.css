@@ -1,0 +1,173 @@
+
+.hero {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: black;
+  max-width: 500px;
+}
+
+.hero__content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.hero__content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.hero__btn {
+        padding: 17px 25px;
+    border-radius: 24px;
+    border: 0px solid white;
+    background-color: #A9562E;
+    padding: 15px 30px;
+        font-weight: 600;
+    
+}
+
+/* Bloc formulaire élégant */
+.hero__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Inputs classe */
+.hero__form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Bouton premium */
+.hero__form button {
+  padding: 12px;
+  background: #ff8c00;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero__form button:hover {
+  background: #e67600;
+  transform: translateY(-2px);
+}
+
+.offre {
+        font-size: 30px;
+    font-weight: 600;
+}
+
+.font {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.offre-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.objectif {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.objectif:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.offre-icon {
+  font-size: 32px;
+  color: #C46A3A;
+  background: rgba(196, 106, 58, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.objectif h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.objectif h4 {
+  font-size: 15px;
+  color: #666;
+  font-weight: 400;
+}
+
+.convivial {
+      width: 90%;
+          height: 300px;
+}
+
+@media (max-width: 768px) {
+  .offre-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .objectif {
+    width: 90%;
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .hero__content {
+    left: 5%;
+    right: 5%;
+  }
+
+  .hero__content h1 {
+    font-size: 24px;
+  }
+}
