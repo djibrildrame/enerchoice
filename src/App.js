@@ -3,6 +3,9 @@ import './App.css';
 import Accueil from "../src/Accueil/Accueil";
 import Galerie from "../src/Galerie/Galerie";
 import Contact from "./Contact/Contact";
+import Rejoindre from "./Rejoindre/Rejoindre";
+import Postuler from "./Postuler/Postuler";
+
 
 function App() {
   return (
@@ -11,8 +14,10 @@ function App() {
         <Router>
       <Routes>
         <Route path="/" element={<Accueil />} /> 
-        <Route path="/galerie" element={<Galerie />} /> 
-        <Route path="/contact" element={<Contact />} /> 
+        <Route path="/Galerie" element={<Galerie />} /> 
+        <Route path="/Contact" element={<Contact />} /> 
+        <Route path="/Nousrejoindre" element={<Rejoindre />} /> 
+        <Route path="/Postuler" element={<Postuler />} />
       </Routes>
     </Router>
 

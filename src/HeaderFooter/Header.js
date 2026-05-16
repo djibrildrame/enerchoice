@@ -15,7 +15,7 @@ export const Accueil = () => {
           <nav className="nav">
             <Link to="/" className="navLink">Accueil</Link>
             <Link to="/galerie" className="navLink">Galerie</Link>
-            <Link to="/rejoindre" className="navLink">Nous rejoindre</Link>
+            <Link to="/Nousrejoindre" className="navLink">Nous rejoindre</Link>
             <Link to="/contact" className="navLink">Contact</Link>
           </nav>
         </div>

@@ -1,0 +1,146 @@
+.postulerSection {
+  min-height: 100vh;
+  padding: 90px 10%;
+  background: linear-gradient(to bottom, #fff, #f8f8f8);
+}
+
+.postulerContainer {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  border-radius: 18px;
+  padding: 60px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.postulerTitle {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 42px;
+  color: #111;
+}
+
+.postulerText {
+  text-align: center;
+  color: #666;
+  font-size: 17px;
+  margin-bottom: 50px;
+}
+
+.postulerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.doubleInput {
+  display: flex;
+  gap: 25px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inputBox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #222;
+  font-size: 15px;
+}
+
+.inputBox label i {
+  color: #c95724;
+  font-size: 17px;
+}
+
+.inputBox input,
+.inputBox select,
+.inputBox textarea {
+  width: 100%;
+  padding: 17px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.inputBox input:focus,
+.inputBox select:focus,
+.inputBox textarea:focus {
+  border-color: #c95724;
+  box-shadow: 0 0 0 4px rgba(201, 87, 36, 0.08);
+}
+
+.inputBox textarea {
+  resize: none;
+}
+
+.fileUpload {
+  border: 2px dashed #c95724;
+  background: #fff7f3;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fileUpload:hover {
+  background: #ffeee5;
+}
+
+.fileUpload i {
+  font-size: 35px;
+  color: #c95724;
+  margin-bottom: 15px;
+}
+
+.fileUpload p {
+  color: #555;
+  font-size: 15px;
+}
+
+.fileUpload input {
+  margin-top: 15px;
+}
+
+.envoyerBtn {
+  margin-top: 10px;
+  padding: 18px;
+  background: #c95724;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.envoyerBtn:hover {
+  background: #ad491d;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+
+  .postulerContainer {
+    padding: 35px 22px;
+  }
+
+  .doubleInput {
+    flex-direction: column;
+  }
+
+  .postulerTitle {
+    font-size: 32px;
+  }
+}

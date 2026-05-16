@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import Header from "../HeaderFooter/Header";
+import Footer from "../HeaderFooter/Footer";
 
 const Contact = () => {
   return (
@@ -37,28 +38,23 @@ const Contact = () => {
           <form className="contactForm">
             <div className="doubleField">
               <div className="field">
-                <label htmlFor="nom">Nom</label>
                 <input id="nom" type="text" placeholder="Votre nom" />
               </div>
 
               <div className="field">
-                <label htmlFor="prenom">Prénom</label>
                 <input id="prenom" type="text" placeholder="Votre prénom" />
               </div>
             </div>
 
             <div className="field">
-              <label htmlFor="email">Email</label>
               <input id="email" type="email" placeholder="Votre email" />
             </div>
 
             <div className="field">
-              <label htmlFor="sujet">Sujet</label>
               <input id="sujet" type="text" placeholder="Objet de votre demande" />
             </div>
 
             <div className="field">
-              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 rows="6"
@@ -73,6 +69,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    <Footer/>
     </div>
   );
 };
