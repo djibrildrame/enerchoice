@@ -4,12 +4,39 @@ import Header from "../HeaderFooter/Header";
 import Footer from "../HeaderFooter/Footer";
 import { Link } from "react-router-dom";
 
+const offres = [
+  {
+    titre: "Formateur Manager",
+    icon: "fa-solid fa-chalkboard-user",
+    description:
+      "Vous accompagnez les équipes commerciales sur le terrain et participez à leur montée en compétence. Votre rôle est de former, suivre et transmettre les bonnes méthodes pour améliorer les performances.",
+  },
+  {
+    titre: "Manager Commercial",
+    icon: "fa-solid fa-briefcase",
+    description:
+      "Vous encadrez une équipe commerciale et suivez les objectifs de vente. Vous êtes présent sur le terrain pour motiver, organiser et aider les commerciaux à progresser.",
+  },
+  {
+    titre: "Manager Réseau",
+    icon: "fa-solid fa-network-wired",
+    description:
+      "Vous développez et structurez le réseau commercial Enerchoice. Vous assurez le lien entre les équipes, les partenaires et les différents points de vente.",
+  },
+  {
+    titre: "Commercial",
+    icon: "fa-solid fa-handshake",
+    description:
+      "Vous représentez Enerchoice auprès des clients et présentez nos solutions avec clarté. Votre mission est d’écouter, conseiller et accompagner chaque client dans sa démarche.",
+  },
+];
+
 const Rejoindre = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [posteChoisi, setPosteChoisi] = useState("");
+  const [offreChoisie, setOffreChoisie] = useState(null);
 
-  const ouvrirModal = (poste) => {
-    setPosteChoisi(poste);
+  const ouvrirModal = (offre) => {
+    setOffreChoisie(offre);
     setModalOpen(true);
   };
 
@@ -40,125 +67,66 @@ const Rejoindre = () => {
           <div className="avantageCard">
             <i className="fa-solid fa-chart-line"></i>
             <h3>Développement</h3>
-            <p>
-              Bénéficiez d’opportunités d’évolution et de formations continues.
-            </p>
+            <p>Bénéficiez d’opportunités d’évolution et de formations continues.</p>
           </div>
 
           <div className="avantageCard">
             <i className="fa-solid fa-heart"></i>
             <h3>Équilibre</h3>
-            <p>
-              Nous favorisons l’équilibre entre vie professionnelle et vie
-              personnelle.
-            </p>
+            <p>Nous favorisons l’équilibre entre vie professionnelle et vie personnelle.</p>
           </div>
         </div>
       </section>
 
       <section className="offresSection">
-        <h2>Nos Offres d'emploi</h2>
+        <h2>Nos offres d’emploi</h2>
 
         <p>
           Découvrez nos offres ouvertes et trouvez votre place au sein de
-          l'aventure Enerchoice :
+          l’aventure Enerchoice.
         </p>
 
-        <div className="offre">
-          <div>
-            <i className="fa-solid fa-chalkboard-user"></i>
-            <p>Formateur Manager</p>
-          </div>
+        <div className="offresList">
+          {offres.map((offre, index) => (
+            <div className="offre" key={index}>
+              <div className="offreLeft">
+                <i className={offre.icon}></i>
+                <p>{offre.titre}</p>
+              </div>
 
-          <div>
-            <i className="fa-solid fa-location-dot"></i>
-            <p>Île-de-France</p>
-          </div>
+              <div className="offreLocation">
+                <i className="fa-solid fa-location-dot"></i>
+                <p>Île-de-France</p>
+              </div>
 
-          <button onClick={() => ouvrirModal("Formateur Manager")}>
-            Voir Offre
-          </button>
-        </div>
-
-        <div className="offre">
-          <div>
-            <i className="fa-solid fa-briefcase"></i>
-            <p>Manager Commercial</p>
-          </div>
-
-          <div>
-            <i className="fa-solid fa-location-dot"></i>
-            <p>Île-de-France</p>
-          </div>
-
-          <button onClick={() => ouvrirModal("Manager Commercial")}>
-            Voir Offre
-          </button>
-        </div>
-
-        <div className="offre">
-          <div>
-            <i className="fa-solid fa-network-wired"></i>
-            <p>Manager Réseau</p>
-          </div>
-
-          <div>
-            <i className="fa-solid fa-location-dot"></i>
-            <p>Île-de-France</p>
-          </div>
-
-          <button onClick={() => ouvrirModal("Manager Réseau")}>
-            Voir Offre
-          </button>
-        </div>
-
-        <div className="offre">
-          <div>
-            <i className="fa-solid fa-handshake"></i>
-            <p>Commercial</p>
-          </div>
-
-          <div>
-            <i className="fa-solid fa-location-dot"></i>
-            <p>Île-de-France</p>
-          </div>
-
-          <button onClick={() => ouvrirModal("Commercial")}>
-            Voir Offre
-          </button>
+              <button onClick={() => ouvrirModal(offre)}>Voir l’offre</button>
+            </div>
+          ))}
         </div>
       </section>
 
-      {modalOpen && (
+      {modalOpen && offreChoisie && (
         <div className="modalOverlay">
           <div className="modalBox">
             <button className="closeModal" onClick={fermerModal}>
               ×
             </button>
 
-            <h2>{posteChoisi}</h2>
+            <div className="modalIcon">
+              <i className={offreChoisie.icon}></i>
+            </div>
+
+            <h2>{offreChoisie.titre}</h2>
 
             <p className="modalLocation">
               <i className="fa-solid fa-location-dot"></i> Île-de-France
             </p>
 
-            <p>
-              Rejoignez Enerchoice et participez au développement d’une équipe
-              ambitieuse, dynamique et tournée vers la performance.
-            </p>
-
-            <h3>Profil recherché</h3>
-
-            <ul>
-              <li>Bon relationnel</li>
-              <li>Esprit d’équipe</li>
-              <li>Motivation et sérieux</li>
-              <li>Envie d’évoluer dans un environnement commercial</li>
-            </ul>
+            <p className="modalDescription">{offreChoisie.description}</p>
 
             <Link to="/Postuler" className="postulerBtn">
-  Postuler maintenant
-</Link>
+              Postuler maintenant
+            </Link>
           </div>
         </div>
       )}

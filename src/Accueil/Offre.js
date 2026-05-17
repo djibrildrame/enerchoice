@@ -12,6 +12,12 @@ const Offre = () => {
     <div>
       <h2 className='offre'>Les avantages</h2>
       <p>L'occasion de faire une grande carrière</p>
+           <p className="hero__subtitle">
+          Intégrez une équipe ambitieuse, dynamique et tournée vers
+          l’évolution.<br/> Développez vos compétences dans un environnement
+          professionnel stimulant<br/> et participez à une aventure humaine
+          et commerciale enrichissante.
+        </p>
       
 
 <div className='offre-icons'>
@@ -23,7 +29,7 @@ const Offre = () => {
 
         <div>
           <h2>Gagner beaucoup d'argent</h2>
-          <h4>Touchez entre 5000 à 2000 euros</h4>
+          <h4>Touchez entre 2 000 et 5 000 euros</h4>
 
 
         </div>

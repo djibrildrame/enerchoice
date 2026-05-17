@@ -144,3 +144,13 @@
     font-size: 32px;
   }
 }
+
+.messageValidation {
+  background: #e9f8ee;
+  color: #1d7f3a;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+}

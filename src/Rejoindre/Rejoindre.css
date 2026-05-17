@@ -62,8 +62,7 @@
 }
 
 .offre {
-  display: flex;
-  align-items: center;
+
   justify-content: space-between;
   border: 1px solid #ddd;
   padding: 20px 40px;
@@ -126,6 +125,33 @@
   border: none;
   font-size: 32px;
   cursor: pointer;
+}
+
+.modalDescription {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postulerBtn {
+  display: inline-block;
+  background: #c95724;
+  color: white;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.postulerBtn:hover {
+  background: #a9471d;
 }
 
 .modalBox h2 {
