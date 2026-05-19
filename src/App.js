@@ -6,6 +6,7 @@ import Contact from "./Contact/Contact";
 import Rejoindre from "./Rejoindre/Rejoindre";
 import Postuler from "./Postuler/Postuler";
 import CandidatureEnvoyee from "./CandidatureEnvoyee/CandidatureEnvoyee";
+import MessageEnvoyee from "./MessageEnvoyee/MessageEnvoyee";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Nousrejoindre" element={<Rejoindre />} /> 
         <Route path="/Postuler" element={<Postuler />} />
         <Route path="/CandidatureEnvoyee" element={<CandidatureEnvoyee />} />
+        <Route path="/MessageEnvoyee" element={<MessageEnvoyee />} />
       </Routes>
     </Router>
 
